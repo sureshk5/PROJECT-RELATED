@@ -1,0 +1,53 @@
+
+<html>
+<head>
+	<title>Form Validation</title>
+	<script type="text/javascript" src="./static/userjava.js"></script>
+	<link rel="stylesheet" type="text/css" href="./static/user.css">
+	<script type="text/javascript" src="./static/jquery-3.4.1.js"></script>
+</head>
+<body >
+	
+	<div id="div1" >
+	<form action="/Home"name="registration" onSubmit="return validation();" id="form">
+		<fieldset>   <!--0th element-->
+			<legend style="align:center;">Personal Detail</legend></br>
+				<label>First Name:</label></br>
+				<input type="text" placeholder="First Name" name="fname" id="fname"></input></br> <!--1 element-->
+				<label>Last Name:</label></br>
+				<input type="text" placeholder="Last Names" name="lname"></input></br> <!--2 element-->
+				<label>Gender</label></br>
+				<select name="gname"> <!--3 element-->
+				<option selected="" value="Default">Select</option>
+				<option>Male</option>
+                <OPTION>Female</OPTION></select></br>
+                
+
+                <label>AddressProof</label></br>
+				<select name="address"> <!--4 element-->
+				<option selected="" value="Default">Select</option>
+                <option>AADHAR</option>
+                <OPTION>VOTERID</OPTION>
+                <OPTION>PASSPORT</OPTION>
+				<OPTION>PANCARD</OPTION></select></br> 
+                
+                <input type="text" name="address" id="color" style='display:none;'/> <!--5 element-->
+                <label>Contact Number</label></br>
+                <input type="text" placeholder="Mobile Number" name="number"></input> <!--6 element-->
+
+                <label>Email</label>
+                <label id="lbl" style="color: red;visibility: hidden;">Invalid</label>  
+                <input type="text" placeholder="Email" name="email"></input>  <!--7 element-->
+
+                <label>One Time Password</label>
+                <label id="lbltext" style="color: red;visibility: hidden;">Invalid</label>
+                <input type="text" placeholder="OTP" name="otp"></input>  <!--8 element-->
+
+				<input type="submit" value="Submit" name="Submit" onclick="getValues()"></input> <!--9 element-->
+		</fieldset>
+		</form>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+alter table xx drop primary key, add primary key(k1, k2, k3);//change primary key in the existing
+
+alter table xx add userId varchar(100) after contact_number//to add the additional column in the table without droping.
+
+alter table guideregister change user_id userid varchar(100)//change the name of the column in the table.

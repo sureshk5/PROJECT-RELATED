@@ -1,0 +1,13 @@
+1: 
+@RequestMapping(value="/neha",method=RequestMethod.POST,consumes ="application/json",  produces="application/json")
+	public @ResponseBody ResponseEntity<?> getvalue(@RequestBody String gd)
+	{
+		Base64.Decoder decoder = Base64.getDecoder(); 
+		byte[] decodedByteArray=decoder.decode(gd);
+		String stringValue=new String(decodedByteArray);
+		System.out.println(new String(decodedByteArray));
+		obj1.decodeIntoSHA256(stringValue);
+		Map<String, Object> model= new HashMap<String,Object>();
+		model.put("message", stringValue);
+		return new ModelAndView("http://localhost:1234/Home");
+	}
